@@ -11,3 +11,11 @@ body {
 .hover-shadow:hover {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
 }
+#spinner {
+  background: #fff url(img/spinner-page.gif) no-repeat center center;
+  background-size: 10%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}

@@ -9,14 +9,14 @@ const allLeagues = (countrieName) => {
 const getLeague = (leauges) => {
   const cardContainer = document.getElementById("card-container");
   cardContainer.textContent = ``;
-  leauges.forEach(leauge => {
+  leauges.forEach((leauge) => {
     // console.log(leauge);
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
-        <div class="card h-100 hover-shadow " onclick = getTeams(${
+        <div class="card h-100 hover-shadow " onclick = "getTeams('${
           leauge.strLeague
-        })>
+        }')">
       <div class = "p-2">
         <img src="${leauge.strBadge}" class="card-img-top" alt="...">
       </div>
@@ -37,18 +37,18 @@ const searchBtn = () => {
 };
 
 const getTeams = (teamName) => {
-  console.log(teamName)
+  // console.log(teamName)
   const url = `https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=${teamName}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => console.log(data.teams))
-    .catch((error) => console.log(error))
+    .then((data) => teamData(data.teams))
+    .catch((error) => console.log(error));
 };
 
 const teamData = (teams) => {
   const ol = document.getElementById("ol");
   ol.textContent = ``;
-  teams.forEach(team => {
+  teams.forEach((team) => {
     // console.log(team.strTeam);
     const li = document.createElement("li");
     li.innerText = `${team.strTeam}`;
@@ -56,7 +56,10 @@ const teamData = (teams) => {
   });
 };
 
-// strTeam
+const spinner = document.getElementById("spiner");
+window.addEventListener("load", () => {
+  spinner.style.display = "none";
+});
+
 // allLeagues('');
-// idLeague
 // https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=English%20Premier%20League
