@@ -29,14 +29,17 @@
           <div class="col-6 text-center text-md-end">
             <input
               type="text"
-              class="me-4 rounded text-center py-1"
+              class="me-4 rounded text-center py-1 field bg-light"
               name=""
               id="searchField"
               placeholder="enter country name"
             />
           </div>
           <div class="col-6 text-center text-md-start">
-            <button class="py-1 px-5 rounded" onclick="searchBtn()">
+            <button
+              class="py-1 px-5 rounded field bg-success hover-shadow text-light"
+              onclick="searchBtn()"
+            >
               Search
             </button>
           </div>
@@ -58,9 +61,29 @@
           </div>
         </div>
       </section>
+
+      <!-- all sports -->
+      <section class="container mx-auto my-5">
+        <h1 class="text-center my-5">SPORTS</h1>
+        <div class="container text-center">
+          <div
+            class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3"
+            id="col-container"
+          ></div>
+        </div>
+      </section>
     </main>
+    <!-- footer starts here -->
+    <footer>
+      <section>
+        <div class="container-fluid mt-5 bg-success py-5 text-center">
+          <strong>copyright by developer-munir</strong>
+        </div>
+      </section>
+    </footer>
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/allgame.js"></script>
   </body>
 </html>

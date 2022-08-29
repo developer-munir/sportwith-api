@@ -51,6 +51,7 @@ const teamData = (teams) => {
   teams.forEach((team) => {
     // console.log(team.strTeam);
     const li = document.createElement("li");
+    li.classList.add("hover-shadow");
     li.innerText = `${team.strTeam}`;
     ol.appendChild(li);
   });

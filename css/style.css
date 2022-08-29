@@ -19,3 +19,7 @@ body {
   position: fixed;
   z-index: 1000;
 }
+.field {
+  outline: none !important;
+  border: none !important;
+}
