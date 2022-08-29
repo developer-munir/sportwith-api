@@ -1,0 +1,13 @@
+/* box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+.hover-shadow:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
